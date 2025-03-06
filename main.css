@@ -40,6 +40,9 @@ ul {
 a {
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Plus Jakarta Sans';
@@ -121,6 +124,7 @@ body {
 .section-wrapper {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 50px;
 }
 
 .section-card {
@@ -175,9 +179,11 @@ body {
 
 .section-services {
     background: #F2F4F6;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
     gap: 32px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    padding-bottom: 32px;
 }
 
 .card {
@@ -185,10 +191,12 @@ body {
     background: #F2F4F6;
     border: 2px solid #E1E7ED;
     border-radius: 6px;
+    padding: 20px 20px 20px 0;
+    /* width: 380px; */
 }
 
 .card-1 {
-
+    padding: 20px 20px 20px 0;
     background: #F2F4F6;
     border: 2px solid #E1E7ED;
     border-radius: 6px;
@@ -207,7 +215,6 @@ body {
 }
 
 .services-title-deve {
-    margin-top: 40px;
     margin-bottom: 20px;
     padding-left: 27px;
     font-style: normal;
@@ -254,7 +261,20 @@ body {
     background: #1AAB7B;
     border-radius: 6px;
 }
-
+.card:hover .services-title, 
+        .card:hover .services-title-deve, 
+        .card:hover .services-text,
+        .card:hover .heding-title1
+         {
+            color: #fff;
+        }
+        .card-1:hover .services-title, 
+        .card-1:hover .services-title-deve, 
+        .card-1:hover .services-text,
+        .card-1:hover .heding-title1
+         {
+            color: #fff;
+        }
 .card-1:hover {
 
     background: #1AAB7B;
@@ -288,51 +308,7 @@ body {
     display: flex;
 }
 
-.logo::after {
-    content: url("./images/logo-1.svg");
-    margin-left: 43px;
-     position: relative; 
-    top: 30px;
-    padding-right: 30px;
-    
-}
 
-.logo-2::after {
-    content: url("./images/logo-2.svg");
-    position: relative;
-    top: 30px;
-    margin-left: 175px;
-    padding-right: 30px;
-}
-
-.logo-3::after {
-    content: url("./images/logo-3.svg");
-    position: relative;
-    top: 20px;
-    margin-left: 90px;
-    padding-right: 30px;
-}
-
-.logo-4::after {
-    content: url("./images/logo-4.svg");
-    position: relative;
-    top: 30px;
-    margin-left: 98px;
-    padding-right: 30px;
-}
-
-.logo-5::after {
-    content: url("./images/logo-5.svg");
-    position: relative;
-    top: 20px;
-    margin-left: 25px;
-    padding-right: 30px;
-}
-
-
-.section-portfolio {
-
-}
 
 .title-portfolio {
     padding-top: 100px;
@@ -364,7 +340,13 @@ body {
 
 .portfolio-img {
     margin-bottom: 100px;
-    border-radius: 6px;
+    border-radius: 20px;
+}
+.portfolio-video{
+    margin-bottom: 100px;
+    border-radius: 20px;
+    width: 488px;
+    height: 390px;
 }
 
 .title-portfolio-1 {
@@ -392,7 +374,8 @@ body {
 
 .heading {
     margin-top: 50px;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
+    margin: 50px 0;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -400,18 +383,6 @@ body {
     text-align: center;
     color: #101010;
 }
-
-.paragraph {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    text-align: center;
-    color: #636F87;
-    margin-bottom: 60px;
-
-}
-
 .section-form {
     background: #F2F4F6;
     border-radius: 6px;
@@ -590,9 +561,11 @@ body {
     line-height: 150%;
     text-align: right;
     color: #FFFFFF;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 .footer-end{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
